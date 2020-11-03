@@ -51,6 +51,11 @@ function processImages(){
 	.pipe(gulp.dest("dist/assets/media"))
 	.pipe(connect.reload())
 }
+function processFonts(){
+	return gulp.src("src/fonts/**/*")
+	.pipe(gulp.dest("dist/assets/fonts"))
+	.pipe(connect.reload())
+}
 function watch() {
 	gulp.watch("src/sass/**/*.scss",
 	{ ignoreInitial: false },
@@ -64,6 +69,9 @@ function watch() {
 	gulp.watch("src/js/**/*",
 	{ ignoreInitial: false },
 	processImages);
+	gulp.watch("src/fonts/**/*",
+	{ ignoreInitial: false },
+	processFonts);
 }
 
 function server() {

@@ -1,0 +1,22 @@
+@mixin pokeFontSolid($size, $weight, $color, $letter-spacing, $hovercolor:null){
+    font-family: pokemonSolid;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    @if($hovercolor != null){
+        &:hover{
+            color: $hovercolor;
+        }
+    }
+}
+@mixin pokeFontHollow($size, $weight, $color, $letter-spacing, $hovercolor:null){
+    font-family: pokemonHollow;
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+    @if($hovercolor != null){
+        &:hover{
+            color: $hovercolor;
+        }
+    }
+}

@@ -1,86 +1,94 @@
-.header{
+.homepageHeader{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    padding: 10px 20px 0 20px;
-    height: 10vh;
-
-    &__burgerMenu {
-        height: 100%;
-        width: 100%;
-        display: flex;
-        align-items: center;
-    }
+    padding: 10px 20px 10px 20px;
+    background-color: red;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: 12vh;
 
 
-    // header burger menu
-    &__burgerLabel {
-        display: flex;
-        flex-direction: column;
-        gap: 5px;
-        width: 40px;
-        transition: .5s;
-        cursor: pointer;
-
-        &Line {
-            height: 7px;
-            width: 100%;
-            background-color: black;
-            display: block;
-            transition: .5s;
-
-            &:first-child {
-                border-top-left-radius: 5px;
-                border-top-right-radius: 5px;
-
-            }
-            &:last-child {
-                border-bottom-left-radius: 5px;
-                border-bottom-right-radius: 5px;
-
-            }
-        }
-    }
-    &__burgermenuInput {
+    &__backarrow {
         display: none;
-        &:checked ~ .header__navigation{
-            height: 200px;
-        }
-        &:checked ~ .header__burgerLabel{
-            gap: 0;
-            & > .header__burgerLabelLine:first-child {
-                border-top-left-radius: 0;
-                border-top-right-radius: 0;
-                opacity: 0;
-            }
-            & > .header__burgerLabelLine:last-child {
-                border-bottom-left-radius: 0;
-                border-bottom-right-radius: 0;
-                opacity: 0;
-            }
-        }
     }
 
-    &__navigation {
-        transition: height .5s;
-        overflow: hidden;
-        position: absolute;
-        top: 10vh;
-        height: 0;
-        background-color: blue;
-        left: 0;
-        right: 0;
+    // header headings
+    &__headings {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        grid-column: 2;
     }
-
-
-    // header heading
-
     &__heading {
         display: flex;
         justify-content: center;
         align-items: center;
         width: 100%;
         height: 100%;
+        @include pokeFontSolid(40px, 700, yellow, 3px );
+        -webkit-text-stroke: 3px blue;
+    }
+    &__secondaryHeading {
+        @include pokeFontSolid(15px, 700, yellow, 2px);
+        -webkit-text-stroke: 1px blue;
     }
 
+
+
+
+
+    // search styling
+    &__searchWrapper {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: yellow;
+        font-size: 25px;
+    }
+
+
+
+    &__searchForm {
+        transition: .3s;
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        top: 12vh;
+        background-color: black;
+        left: 5%;
+        right: 5%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    &__searchFormInput {
+        height: 40px;
+        width: 80%;
+        border-top-left-radius: 5px;
+        border-bottom-left-radius: 5px;
+        border: blue solid 2px;
+        border-right: 0;
+        background-color: rgb(255, 255, 171);
+        padding: 0 20px;
+        @include pokeFontSolid(14px, 700, yellow, 5px);
+        -webkit-text-stroke: 1px blue;
+    }
+    &__searchFormSubmit {
+        height: 40px;
+        color: red;
+        font-size: 17px;
+        width: 40px;
+        border: 2px blue solid;
+        border-left: 1px blue solid;
+        border-top-right-radius: 5px;
+        border-bottom-right-radius: 5px;
+        background-color: rgb(255, 255, 171);
+    }
 
 }

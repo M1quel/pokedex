@@ -5,25 +5,40 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PokeDex</title>
     <link rel="stylesheet" href="/assets/css/style.css">
+    <script src="https://kit.fontawesome.com/69046e919d.js" crossorigin="anonymous"></script>
 </head>
 <body>
-    <header class="header">
-        <div class="header__burgerMenu">
-            <input class="header__burgermenuInput" type="checkbox" name="check" id="check">
-            <label class="header__burgerLabel" for="check">
-                <span class="header__burgerLabelLine"></span>
-                <span class="header__burgerLabelLine"></span>
-                <span class="header__burgerLabelLine"></span>
-            </label>
-            <nav class="header__navigation">
-                <a class="header__navigationLink" href="#">PokeDex</a>
-                <a class="header__navigationLink" href="#">AbilityDex</a>
-            </nav>
+    <header class="homepageHeader">
+        <a class="homepageHeader__backarrow" href="#"><i class="fas fa-arrow-left"></i></a>
+        <section class="homepageHeader__headings" href="#">
+            <a href="index.html"><h1 class="homepageHeader__heading">PokéDex</h1></a>
+            <a href="abilityDex.html"><h2 class="homepageHeader__secondaryHeading">AbilityDex</h2></a>
+        </section>
+        <div class="homepageHeader__searchWrapper">
+            <i class="fas fa-search homepageHeader__searchIcon"></i>
+            <form class="homepageHeader__searchForm" action="">
+                <input class="homepageHeader__searchFormInput" type="text" id="searchInput" name="searchInput">
+                <button class="homepageHeader__searchFormSubmit" type="submit"><i class="fas fa-search"></i></button>
+            </form>
         </div>
-        <a href="#"><h1 class="header__heading">PokeDex</h1></a>
     </header>
 
+    <main class="homepageMain">
+    </main>
+    
+    
+    <footer class="homepageFooter">
+        <a href="#" class="homepageFooter__previous homepageFooter__navigation"><i class="fas fa-arrow-left"></i></a>
+        <a href="#" class="homepageFooter__next homepageFooter__navigation"><i class="fas fa-arrow-right"></i></a>
 
-    <script src="/assets/app.js"></script>
+
+    </footer>
+
+    <template id="pokemonCardTemplate">
+        <a class="homepageMain__pokemonCard" href="#">
+            <h3 class="homepageMain__pokemonName">din mor</h3>
+        </a>
+    </template>
+    <script src="/assets/js/app.js"></script>
 </body>
 </html>

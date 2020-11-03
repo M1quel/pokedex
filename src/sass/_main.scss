@@ -1,0 +1,22 @@
+.homepageMain {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 13vh;
+    gap: 20px;
+
+    &__pokemonCard {
+        display: flex;
+        width: 80%;
+        align-items: center;
+        justify-content: center;
+        height: 100px;
+        background-color: red;
+        border: 2px blue solid;
+        border-radius: 10px;
+    }
+    &__pokemonName {
+        @include pokeFontSolid(20px, 700, yellow, 3px);
+        -webkit-text-stroke: 1px blue;
+    }
+}
